@@ -35,11 +35,15 @@ public class ListViewFragment extends Fragment {
 
             item.title = "Group " + i;
 
-            for(int j = 0; j < i; j++) {
+            for(int j = 0; j < 1; j++) {
                 ChildItem child = new ChildItem();
-                child.title = "Awesome item " + j;
-                child.hint = "Too awesome";
-
+                child.title = "Awesome item , Awesome item, " +
+                        "Awesome item, Awesome item, " +
+                        "Awesome item, Awesome item, " +
+                        "Awesome item, Awesome item, " +
+                        "Awesome item, Awesome item, " +
+                        "Awesome item, Awesome item, " +
+                        "Awesome item, Awesome item " + j;
                 item.items.add(child);
             }
 
@@ -78,12 +82,10 @@ public class ListViewFragment extends Fragment {
 
     private static class ChildItem {
         String title;
-        String hint;
     }
 
     private static class ChildHolder {
         TextView title;
-        TextView hint;
     }
 
     private static class GroupHolder {
@@ -125,14 +127,12 @@ public class ListViewFragment extends Fragment {
                 holder = new ChildHolder();
                 convertView = inflater.inflate(R.layout.list_item, parent, false);
                 holder.title = (TextView) convertView.findViewById(R.id.textTitle);
-                holder.hint = (TextView) convertView.findViewById(R.id.textHint);
                 convertView.setTag(holder);
             } else {
                 holder = (ChildHolder) convertView.getTag();
             }
 
             holder.title.setText(item.title);
-            holder.hint.setText(item.hint);
 
             return convertView;
         }
