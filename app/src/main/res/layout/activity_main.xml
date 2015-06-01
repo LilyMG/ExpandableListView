@@ -29,13 +29,9 @@
     </WebView>
     <FrameLayout android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="match_parent"
         />
 
-    <com.example.lilit.web.AnimatedExpandableListView
-        android:id="@+id/listview"
-        android:groupIndicator="@null"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+
 
 </LinearLayout>
