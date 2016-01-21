@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getFragmentManager().beginTransaction().add(R.id.container, new ListViewFragment()).commit();
+        getFragmentManager().beginTransaction().replace(R.id.container, new ListViewFragment()).commit();
     }
 
 
